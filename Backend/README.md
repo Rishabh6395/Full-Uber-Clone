@@ -45,3 +45,30 @@ The request body must be in JSON format and contain the following fields:
   "email": "john.doe@example.com",
   "password": "password123"
 }
+```
+# Login Endpoint Documentation
+
+## Description
+The `/users/login` endpoint is used to authenticate a user using their email and password.
+
+---
+
+## Status Codes
+- **200 OK**: The user was authenticated successfully.
+- **401 Unauthorized**: The email or password is invalid.
+- **400 Bad Request**: Validation errors in the request data.
+
+---
+
+## Request Data
+The request body must be in JSON format and contain the following fields:
+
+- `email` (string): The user's email address.
+- `password` (string): The user's password.
+
+### Example Request Data
+```json
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
